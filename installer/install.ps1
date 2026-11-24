@@ -124,7 +124,7 @@ function Update-ConfigSafely([string]$Path, [scriptblock]$Edit) {
         & $Edit $temporary
         if (-not (Test-Path -LiteralPath $temporary)) { throw 'A configuracao temporaria nao foi criada.' }
         # Replace only after every CLI edit succeeds; keep a byte-for-byte backup.
-        if (Test-Path -LiteralPath $Path) { [IO.File]::Replace($temporary, $Path, $null) }
+        if (Test-Path -LiteralPath $Path) { [IO.File]::Replace($temporary, $Path, [NullString]::Value) }
         else { [IO.File]::Move($temporary, $Path) }
         if ($backup) { Write-Log "Configuracao anterior preservada em: $backup" }
     } finally { if (Test-Path -LiteralPath $temporary) { Remove-Item -LiteralPath $temporary -Force } }
