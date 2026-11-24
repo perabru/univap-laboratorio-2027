@@ -32,8 +32,6 @@ jobs:
             if ([Text.Encoding]::ASCII.GetString($bytes, 0, 5) -ne '%PDF-') { throw "PDF invalido: $pdf" }
           }
           if (!(Test-Path docs/index.html)) { throw 'Pagina inicial ausente.' }
-          node --check docs/app.js
-          if ($LASTEXITCODE -ne 0) { throw 'JavaScript invalido.' }
       - uses: actions/upload-artifact@v4
         with:
           name: portal-completo

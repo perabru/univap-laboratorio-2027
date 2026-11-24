@@ -3,95 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#003b71">
-  <meta name="description" content="Programas para as aulas de Redes, Banco de Dados, Programação para Dispositivos Móveis e Circuitos Lógicos Digitais. Planos de ensino 2027 e instalador ESP32 e Raspberry Pi Pico.">
-  <title>Laboratório 2027 | Prof. Bruno Michel Pera</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Links dos programas e planos de ensino de 2027.">
+  <title>Downloads e planos de ensino · 2027</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Laboratório 2027, início"><span class="brand-symbol" aria-hidden="true">L<span>27</span></span><span class="brand-name">Laboratório<span>TECNOLOGIA · 2027</span></span></a>
-      <nav aria-label="Navegação principal"><a href="#programas">Programas</a><a href="#planos">Planos de ensino</a><a href="#instalador">Instalador</a></nav>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Ativar tema escuro" aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.7 14A8.8 8.8 0 0 1 10 3.3 9 9 0 1 0 20.7 14Z"/></svg><span id="theme-label">Tema escuro</span></button>
-    </div>
-  </header>
+  <header class="page-header"><h1>Downloads 2027</h1></header>
   <main id="conteudo">
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-pattern" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span>RECURSOS PARA AS AULAS</p>
-          <h1 id="hero-title">Seu laboratório<br>começa aqui<span>.</span></h1>
-          <p class="hero-description">Os programas que você vai usar, os planos de ensino e as ferramentas para preparar seu computador. Tudo organizado por disciplina.</p>
-          <div class="hero-actions"><a class="button button-red" href="#programas">Encontrar um programa</a><a class="button button-ghost" href="#planos">Ver planos de ensino</a></div>
-          <p class="hero-author">Prof. Bruno Michel Pera <span aria-hidden="true">·</span> Ano letivo 2027</p>
-        </div>
-        <aside class="hero-panel" aria-label="Orientações para começar">
-          <div class="panel-kicker">ANTES DA PRIMEIRA AULA</div>
-          <h2>Prepare seu ambiente.</h2>
-          <p>Escolha a disciplina e abra o link oficial do programa. Na página de download, selecione a versão estável para seu computador.</p>
-          <div class="platform"><span class="windows-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><div><strong>Windows 64 bits</strong><span>Referência para os computadores do laboratório</span></div></div>
-          <div class="panel-note"><span aria-hidden="true">i</span><p>Consulte os requisitos de cada programa antes de instalar. Os links oficiais oferecem as versões disponíveis mais recentes.</p></div>
-        </aside>
-      </div>
-      <div class="container hero-summary" aria-label="Conteúdo do portal"><span><strong>7</strong> programas</span><span><strong>4</strong> planos em PDF</span><span><strong>1</strong> instalador para placas</span></div>
+    <section id="programas" aria-labelledby="programas-titulo">
+      <h2 id="programas-titulo">Programas</h2>
+      <section class="subject" aria-labelledby="redes-titulo">
+        <h3 id="redes-titulo">Redes</h3>
+        <dl>
+          <div><dt>Cisco Packet Tracer</dt><dd><a href="https://www.netacad.com/resources/lab-downloads">https://www.netacad.com/resources/lab-downloads</a></dd></div>
+        </dl>
+      </section>
+      <section class="subject" aria-labelledby="dados-titulo">
+        <h3 id="dados-titulo">Banco de Dados</h3>
+        <dl>
+          <div><dt>MySQL Workbench</dt><dd><a href="https://dev.mysql.com/downloads/workbench/">https://dev.mysql.com/downloads/workbench/</a></dd></div>
+          <div><dt>XAMPP</dt><dd><a href="https://www.apachefriends.org/download.html">https://www.apachefriends.org/download.html</a></dd></div>
+          <div><dt>MongoDB Compass</dt><dd><a href="https://www.mongodb.com/try/download/compass">https://www.mongodb.com/try/download/compass</a></dd></div>
+        </dl>
+      </section>
+      <section class="subject" aria-labelledby="pdm-titulo">
+        <h3 id="pdm-titulo">Programação para Dispositivos Móveis</h3>
+        <dl>
+          <div><dt>Android Studio</dt><dd><a href="https://developer.android.com/studio?hl=pt-br">https://developer.android.com/studio?hl=pt-br</a></dd></div>
+        </dl>
+      </section>
+      <section class="subject" aria-labelledby="cld-titulo">
+        <h3 id="cld-titulo">CLD I e CLD II</h3>
+        <dl>
+          <div><dt>wiRedPanda</dt><dd><a href="https://gibis-unifesp.github.io/wiRedPanda/download/">https://gibis-unifesp.github.io/wiRedPanda/download/</a></dd></div>
+          <div><dt>Arduino IDE</dt><dd><a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></dd></div>
+        </dl>
+      </section>
     </section>
-
-    <section class="program-section container" id="programas" aria-labelledby="program-title">
-      <div class="section-heading"><div><p class="section-kicker">SOFTWARES DO LABORATÓRIO</p><h2 id="program-title">Encontre o que você precisa</h2><p>Downloads oficiais, separados pelas disciplinas das suas aulas.</p></div><span class="section-meta">Versão atual no site oficial</span></div>
-      <div class="search-area">
-        <label class="search-box" for="program-search"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span class="sr-only">Buscar programa ou disciplina</span><input id="program-search" type="search" placeholder="Buscar programa ou disciplina…" autocomplete="off"></label>
-        <div class="filters" role="group" aria-label="Filtrar programas por disciplina"><button type="button" class="filter active" data-filter="todos" aria-pressed="true">Todos</button><button type="button" class="filter" data-filter="redes" aria-pressed="false">Redes</button><button type="button" class="filter" data-filter="dados" aria-pressed="false">Banco de Dados</button><button type="button" class="filter" data-filter="pdm" aria-pressed="false">Dispositivos Móveis</button><button type="button" class="filter" data-filter="cld" aria-pressed="false">CLD I e II</button></div>
-      </div>
-      <p class="results-count" id="results-count" role="status" aria-live="polite">7 programas disponíveis</p>
-      <div class="program-grid">
-        <article class="program-card" data-category="redes" data-search="Cisco Packet Tracer redes computadores simulação topologias">
-          <div class="card-top"><span class="program-icon icon-network" aria-hidden="true">PT</span><span class="subject-tag">Redes</span></div><h3>Cisco Packet Tracer</h3><p class="program-description">Monte redes, configure equipamentos e pratique topologias em um ambiente de simulação.</p><p class="card-tip">O download pode solicitar uma conta gratuita da Cisco Networking Academy.</p><a class="program-link" href="https://www.netacad.com/resources/lab-downloads" target="_blank" rel="noopener noreferrer" aria-label="Baixar Cisco Packet Tracer no site oficial, abre em nova aba">Download oficial</a><span class="source-domain">netacad.com</span>
-        </article>
-        <article class="program-card" data-category="dados" data-search="MySQL Workbench banco de dados SQL modelagem diagramas consultas">
-          <div class="card-top"><span class="program-icon icon-data" aria-hidden="true">SQL</span><span class="subject-tag">Banco de Dados</span></div><h3>MySQL Workbench</h3><p class="program-description">Crie modelos de dados, desenvolva consultas SQL e administre suas conexões MySQL.</p><p class="card-tip">Selecione a edição Community e o instalador adequado ao seu sistema.</p><a class="program-link" href="https://dev.mysql.com/downloads/workbench/" target="_blank" rel="noopener noreferrer" aria-label="Baixar MySQL Workbench no site oficial, abre em nova aba">Download oficial</a><span class="source-domain">dev.mysql.com</span>
-        </article>
-        <article class="program-card" data-category="dados" data-search="XAMPP banco de dados Apache PHP MariaDB phpMyAdmin servidor">
-          <div class="card-top"><span class="program-icon icon-xampp" aria-hidden="true">X</span><span class="subject-tag">Banco de Dados</span></div><h3>XAMPP</h3><p class="program-description">Prepare um servidor local com Apache, PHP, MariaDB e phpMyAdmin para suas práticas.</p><p class="card-tip">Na página de download, escolha a opção para Windows 64 bits.</p><a class="program-link" href="https://www.apachefriends.org/download.html" target="_blank" rel="noopener noreferrer" aria-label="Baixar XAMPP no site oficial, abre em nova aba">Download oficial</a><span class="source-domain">apachefriends.org</span>
-        </article>
-        <article class="program-card" data-category="dados" data-search="MongoDB Compass banco de dados NoSQL documentos coleções cache">
-          <div class="card-top"><span class="program-icon icon-mongo" aria-hidden="true">M</span><span class="subject-tag">Banco de Dados</span></div><h3>MongoDB Compass</h3><p class="program-description">Explore documentos, coleções e consultas no MongoDB com uma interface gráfica.</p><p class="card-tip tip-important">Após instalar, abra pelo menos uma vez com o usuário que utilizará o programa para inicializar o cache.</p><a class="program-link" href="https://www.mongodb.com/try/download/compass" target="_blank" rel="noopener noreferrer" aria-label="Baixar MongoDB Compass no site oficial, abre em nova aba">Download oficial</a><span class="source-domain">mongodb.com</span>
-        </article>
-        <article class="program-card" data-category="pdm" data-search="Android Studio programação dispositivos móveis PDM Kotlin aplicativos emulador">
-          <div class="card-top"><span class="program-icon icon-android" aria-hidden="true">A</span><span class="subject-tag">Dispositivos Móveis</span></div><h3>Android Studio</h3><p class="program-description">Desenvolva aplicativos Android com editor, ferramentas de depuração e emulador.</p><p class="card-tip">Na primeira abertura, conclua a configuração e a instalação dos componentes do Android SDK.</p><a class="program-link" href="https://developer.android.com/studio?hl=pt-br" target="_blank" rel="noopener noreferrer" aria-label="Baixar Android Studio no site oficial, abre em nova aba">Download oficial</a><span class="source-domain">developer.android.com</span>
-        </article>
-        <article class="program-card" data-category="cld" data-search="wiRedPanda WiredPanda circuitos lógicos digitais CLD I II simulação portas lógica">
-          <div class="card-top"><span class="program-icon icon-panda" aria-hidden="true">WP</span><span class="subject-tag">CLD I e II</span></div><h3>wiRedPanda</h3><p class="program-description">Monte circuitos lógicos e acompanhe o comportamento de portas, sinais e componentes digitais.</p><p class="card-tip">Para os computadores do laboratório, escolha Windows x86_64.</p><a class="program-link" href="https://gibis-unifesp.github.io/wiRedPanda/download/" target="_blank" rel="noopener noreferrer" aria-label="Baixar wiRedPanda no site oficial, abre em nova aba">Download oficial</a><span class="source-domain">gibis-unifesp.github.io</span>
-        </article>
-        <article class="program-card" data-category="cld" data-search="Arduino IDE circuitos lógicos digitais CLD I II ESP32 Raspberry Pi Pico RP2040 código programação placas">
-          <div class="card-top"><span class="program-icon icon-arduino" aria-hidden="true">∞</span><span class="subject-tag">CLD I e II</span></div><h3>Arduino IDE</h3><p class="program-description">Escreva, compile e envie programas para placas Arduino, ESP32 e Raspberry Pi Pico.</p><p class="card-tip">Para preparar os pacotes de placas e bibliotecas, utilize também o instalador abaixo.</p><a class="program-link" href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" aria-label="Baixar Arduino IDE no site oficial, abre em nova aba">Download oficial</a><span class="source-domain">arduino.cc</span>
-        </article>
-        <aside class="help-card"><span class="help-icon" aria-hidden="true">?</span><h3>Vai preparar uma placa?</h3><p>O instalador OneClick reúne as etapas de configuração do ambiente para ESP32 e Raspberry Pi Pico.</p><a href="#instalador">Conhecer o instalador</a></aside>
-      </div>
-      <div class="empty-state" id="empty-state" hidden><h3>Nenhum programa encontrado</h3><p>Tente outro nome ou escolha uma disciplina diferente.</p><button type="button" class="button button-blue" id="reset-search">Limpar busca e filtros</button></div>
-      <noscript><p class="noscript-note">Todos os programas estão disponíveis acima. Ative JavaScript para utilizar a busca e os filtros.</p></noscript>
-    </section>
-
-    <section class="plans-section" id="planos" aria-labelledby="plans-title"><div class="container">
-      <div class="section-heading"><div><p class="section-kicker">ORGANIZAÇÃO DAS DISCIPLINAS</p><h2 id="plans-title">Planos de ensino 2027</h2><p>Consulte os objetivos, conteúdos e referências de cada disciplina.</p></div><span class="file-format">PDF · Prontos para baixar</span></div>
-      <div class="plan-grid">
-        <article class="plan-card"><div class="pdf-symbol" aria-hidden="true">PDF</div><p class="plan-type">CIRCUITOS LÓGICOS DIGITAIS</p><h3>CLD I</h3><p>Plano de ensino · 2027</p><a href="planos/Plano_de_Ensino_CLD_I_UNIVAP_2027.pdf" download>Baixar PDF de CLD I</a></article>
-        <article class="plan-card"><div class="pdf-symbol" aria-hidden="true">PDF</div><p class="plan-type">CIRCUITOS LÓGICOS DIGITAIS</p><h3>CLD II</h3><p>Plano de ensino · 2027</p><a href="planos/Plano_de_Ensino_CLD_II_UNIVAP_2027.pdf" download>Baixar PDF de CLD II</a></article>
-        <article class="plan-card"><div class="pdf-symbol" aria-hidden="true">PDF</div><p class="plan-type">REDES DE COMPUTADORES</p><h3>Redes</h3><p>Plano de ensino · 2027</p><a href="planos/Plano_de_Ensino_Redes_UNIVAP_2027.pdf" download>Baixar PDF de Redes</a></article>
-        <article class="plan-card"><div class="pdf-symbol" aria-hidden="true">PDF</div><p class="plan-type">BANCO DE DADOS</p><h3>Banco de Dados</h3><p>Plano de ensino · 2027</p><a href="planos/Plano_de_Ensino_Banco_de_Dados_UNIVAP_2027.pdf" download>Baixar PDF de Banco de Dados</a></article>
-      </div>
-    </div></section>
-
-    <section class="installer-section container" id="instalador" aria-labelledby="installer-title">
-      <div class="installer-card"><div class="installer-copy"><p class="eyebrow">FERRAMENTA DO PROFESSOR</p><h2 id="installer-title">Menos configuração.<br>Mais tempo para criar.</h2><p>Prepare o ambiente Arduino para suas aulas com ESP32 e Raspberry Pi Pico. O OneClick reúne a configuração dos pacotes de placas, bibliotecas e drivers em um executável para Windows.</p><div class="installer-platforms"><span>ESP32</span><span>Raspberry Pi Pico / RP2040</span></div><a class="button button-red exe-download" href="downloads/OneClick-UNIVAP-Setup.exe" download>Baixar instalador para Windows</a><p class="installer-requirements">Requer internet e execução como administrador. Use a conta do Windows que utilizará o Arduino.</p><a class="source-link" href="downloads/OneClick-UNIVAP-Setup.exe.sha256" download>Conferir integridade do arquivo (SHA-256)</a></div>
-        <div class="installer-detail"><h3>Como usar</h3><ol><li><strong>Baixe e abra o executável</strong><span>Use um computador com Windows 64 bits.</span></li><li><strong>Escolha o que deseja configurar</strong><span>Confira as opções para as placas e o ambiente de programação.</span></li><li><strong>Acompanhe a instalação</strong><span>Consulte o resultado e o registro das etapas ao terminar.</span></li></ol><a class="source-link" href="https://github.com/perabru/OneClickInstallerEspRasp" target="_blank" rel="noopener noreferrer">Ver projeto original no GitHub</a></div>
-      </div>
-    </section>
+    <div class="documents">
+      <section id="planos" aria-labelledby="planos-titulo">
+        <h2 id="planos-titulo">Planos de ensino 2027</h2>
+        <ul class="file-list">
+          <li><a href="planos/Plano_de_Ensino_CLD_I_UNIVAP_2027.pdf" download><span>CLD I</span><span class="format">PDF</span></a></li>
+          <li><a href="planos/Plano_de_Ensino_CLD_II_UNIVAP_2027.pdf" download><span>CLD II</span><span class="format">PDF</span></a></li>
+          <li><a href="planos/Plano_de_Ensino_Redes_UNIVAP_2027.pdf" download><span>Redes</span><span class="format">PDF</span></a></li>
+          <li><a href="planos/Plano_de_Ensino_Banco_de_Dados_UNIVAP_2027.pdf" download><span>Banco de Dados</span><span class="format">PDF</span></a></li>
+        </ul>
+      </section>
+      <section id="instalador" aria-labelledby="instalador-titulo">
+        <h2 id="instalador-titulo">Instalador de bibliotecas</h2>
+        <ul class="file-list">
+          <li><a href="downloads/OneClick-UNIVAP-Setup.exe" download><span>OneClick · Windows 64 bits</span><span class="format">EXE</span></a></li>
+        </ul>
+        <a class="project-link" href="https://github.com/perabru/OneClickInstallerEspRasp">https://github.com/perabru/OneClickInstallerEspRasp</a>
+      </section>
+    </div>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><div><strong>Laboratório 2027</strong><p>Material de apoio às aulas · Prof. Bruno Michel Pera</p><p class="footer-fine">Os programas pertencem aos respectivos desenvolvedores. Este portal reúne recursos didáticos do professor.</p></div><div class="footer-links"><a href="https://github.com/perabru/univap-laboratorio-2027" target="_blank" rel="noopener noreferrer">Código do portal</a><a href="#inicio">Voltar ao início</a></div></div></footer>
 </body>
 </html>
