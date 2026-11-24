@@ -1,0 +1,93 @@
+name: Compilar instalador e publicar portal
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portal-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compilar e testar o executável Windows
+        shell: powershell
+        run: ./installer/build.ps1
+      - name: Verificar arquivos do portal
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $pdfs = @(Get-ChildItem docs/planos/*.pdf)
+          if ($pdfs.Count -ne 4) { throw 'Esperados quatro planos de ensino em PDF.' }
+          foreach ($pdf in $pdfs) {
+            $bytes = [IO.File]::ReadAllBytes($pdf.FullName)
+            if ([Text.Encoding]::ASCII.GetString($bytes, 0, 5) -ne '%PDF-') { throw "PDF invalido: $pdf" }
+          }
+          if (!(Test-Path docs/index.html)) { throw 'Pagina inicial ausente.' }
+          node --check docs/app.js
+          if ($LASTEXITCODE -ne 0) { throw 'JavaScript invalido.' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: portal-completo
+          path: docs/
+          include-hidden-files: true
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: portal-completo
+          path: public
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  release:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: portal-completo
+          path: public
+      - name: Disponibilizar executável e planos em uma versão
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: v1.0.${{ github.run_number }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        run: |
+          cat > release-notes.md <<'EOF'
+          Portal de downloads das aulas de 2027, com as cores azul, branco e vermelho.
+
+          Inclui quatro planos de ensino em PDF e o instalador OneClick para Windows 64 bits, com código-fonte em installer/.
+
+          O executável foi compilado no Windows e passou pelos testes de estrutura, configuração e tratamento de erros. Requer internet para obter os pacotes oficiais. A instalação de drivers depende do Windows, das permissões e do hardware presente; não foi validada com todas as placas físicas. O executável não possui certificado de assinatura de código.
+          EOF
+          gh release create "$RELEASE_TAG" --target "$RELEASE_COMMIT" --title "Laboratório 2027 · OneClick $RELEASE_TAG" --notes-file release-notes.md public/downloads/* public/planos/*.pdf

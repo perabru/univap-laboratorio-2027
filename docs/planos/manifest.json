@@ -1,0 +1,22 @@
+[
+  {
+    "arquivo": "Plano_de_Ensino_Banco_de_Dados_UNIVAP_2027.pdf",
+    "bytes": 91155,
+    "sha256": "bee7ebdb70ca481baa6456860d6f1b12527d0fb4955b88c7a634dc00f00d4294"
+  },
+  {
+    "arquivo": "Plano_de_Ensino_CLD_II_UNIVAP_2027.pdf",
+    "bytes": 89588,
+    "sha256": "9a72d06bf09a1a6095a1a3e167b16d9bf1abab787c45bd07b513c0b9b965c643"
+  },
+  {
+    "arquivo": "Plano_de_Ensino_CLD_I_UNIVAP_2027.pdf",
+    "bytes": 92466,
+    "sha256": "e3b26cbb045e90b7d81bec6ab5e5a6b02bf866171ca35dbc662cc15c6716b560"
+  },
+  {
+    "arquivo": "Plano_de_Ensino_Redes_UNIVAP_2027.pdf",
+    "bytes": 112537,
+    "sha256": "025cba6810046d0737b21b7c9347d85ce866ab35e1b1ef9a9657b374fc49682b"
+  }
+]
