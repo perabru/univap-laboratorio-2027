@@ -26,7 +26,7 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
           $pdfs = @(Get-ChildItem docs/planos/*.pdf)
-          if ($pdfs.Count -ne 4) { throw 'Esperados quatro planos de ensino em PDF.' }
+          if ($pdfs.Count -ne 5) { throw 'Esperados cinco planos de ensino em PDF.' }
           foreach ($pdf in $pdfs) {
             $bytes = [IO.File]::ReadAllBytes($pdf.FullName)
             if ([Text.Encoding]::ASCII.GetString($bytes, 0, 5) -ne '%PDF-') { throw "PDF invalido: $pdf" }
@@ -87,8 +87,9 @@ jobs:
           cat > release-notes.md <<'EOF'
           Portal de downloads das aulas de 2027, com as cores azul, branco e vermelho.
 
-          Inclui quatro planos de ensino em PDF e o instalador OneClick para Windows 64 bits, com código-fonte em installer/.
+          Inclui cinco planos de ensino em PDF e o instalador OneClick para Windows 64 bits, com código-fonte em installer/.
 
           O executável foi compilado no Windows e passou pelos testes de estrutura, configuração e tratamento de erros. Requer internet para obter os pacotes oficiais. A instalação de drivers depende do Windows, das permissões e do hardware presente; não foi validada com todas as placas físicas. O executável não possui certificado de assinatura de código.
           EOF
           gh release create "$RELEASE_TAG" --target "$RELEASE_COMMIT" --title "Laboratório 2027 · OneClick $RELEASE_TAG" --notes-file release-notes.md public/downloads/* public/planos/*.pdf
+
